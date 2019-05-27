@@ -4,7 +4,16 @@ This project permit to generate faces with points.
 
 To do that I use the Delaunay triangulation algorithm.
 
-### Sources :
+## How I implement this problem ? 
+
+### Generate all points 
+Firstly to generate all the points I decided to give them random positions for x and y for a given number of points.
+But you can also create two tables, x and y positions, like that you will be able to make faces out of a given amoud of points.
+
+### 
+
+
+## Sources :
 
 These links help me a lot to understand how it works.
 
