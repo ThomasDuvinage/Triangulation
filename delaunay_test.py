@@ -1,5 +1,5 @@
-from cercle import *
-from points import *
+from scripts.cercle import *
+from scripts.points import *
 
 import matplotlib.pyplot as plt
 
