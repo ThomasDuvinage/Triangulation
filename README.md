@@ -16,15 +16,15 @@ To make the Delaunay algorithm works you have to create an array which include a
     
 So the array will look like that :
 
-    ```python
-    array[] = [[A,B,C][A,D,C],...] //depend of the number of point you gave
-    ```
+```
+array[] = [[A,B,C][A,D,C],...] //depend of the number of point you gave
+```
 
 The following formula allows us to determine the number of triangles you will be able to create :
 
-    ```python
-    ((nb_point - 1)(nb_point - 2)(nb_points)) / 2
-    ```
+```
+((nb_point - 1)(nb_point - 2)(nb_points)) / 2
+```
 
 This is very useful because you have to create an array with all triangles, or you will have repetition in the generation of triangles (for example ABC = CBA it is the same traingle). 
 
