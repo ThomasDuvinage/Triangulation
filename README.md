@@ -32,16 +32,16 @@ So to avoid those repetitions I note that we can make an algorithm to solve that
 
 To show it, I took 4 points A,B,C,D, the table below represent all triangles you can draw for one point and if you have to delete because of a repetition
 
-    |Triangles    | Delete     | n    |  
-    | ---         |  ---       | ---  |
-    | ABC         | X          |      |
-    | ABD         | X          | 2    |
-    |             |            |      |
-    | ACB         |            |      |
-    | ACD         | X          | 1    |
-    |             |            |      |
-    | ADB         |            |      |
-    | ADC         |            | 0    |
+|Triangles    | Delete     | n    |  
+| ---         |  ---       | ---  |
+| ABC         | X          |      |
+| ABD         | X          | 2    |
+|             |            |      |
+| ACB         |            |      |
+| ACD         | X          | 1    |
+|             |            |      |
+| ADB         |            |      |
+| ADC         |            | 0    |
 
 So here you can see that the 2 (--> n) first points are deleted and after you substract 1 to n and after you delete all the n points from the end of the (nb_points - 2) group.
 
