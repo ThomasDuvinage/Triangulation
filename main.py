@@ -1,9 +1,10 @@
 from scripts.cercle import *
 from scripts.points import *
+from scripts.generate_triangle import *
 
 import matplotlib.pyplot as plt
 
-points_number = 20
+points_number = 3
 
 circle_size = cercle_parameters(1,3,3,2,1,1)
 
@@ -23,4 +24,10 @@ for row in range(0,points_number):
     print("point y  = ",select_point.points[row][1],"\n")
 
 
-plt.show()
+#this following line permit us to generate all triangles for the figure 
+triangle = generate_triangle(points_number)
+
+for row in range(0,triangle.save_triangle):
+    print("Triangle ", row," = ",triangle.triangles_generated[row])
+
+#plt.show()
