@@ -43,9 +43,22 @@ class generate_triangle:
         # for i in range(self.number_of_triangle):
         #     print(triangles[i])
 
-        #for n in range(self.number_of_triangle):
-        #    for n in range(self.save_triangle):
-                #if(final_triangle[n][0] == final_triangle[self.save_triangle][0] or )
+        n,o = 0,0
+
+        while n < self.number_of_triangle:
+            o = 0
+            while o < self.number_of_triangle:
+                if(o == n and o+1 < self.number_of_triangle):
+                    o += 1
+                if(triangles[n][0] == triangles[o][0] or triangles[n][0] == triangles[o][1] or triangles[n][0] == triangles[o][2]):
+                    if(triangles[n][1] == triangles[o][0] or triangles[n][1] == triangles[o][1] or triangles[n][1] == triangles[o][2]):
+                        if(triangles[n][2] == triangles[o][0] or triangles[n][2] == triangles[o][1] or triangles[n][2] == triangles[o][2]):
+                            triangles.pop(o)
+                            self.number_of_triangle -= 1
+                o += 1
+            n += 1
+
+
                                 
         for n in range(self.number_of_triangle):
             self.triangles_generated[n] = triangles[n]
