@@ -4,7 +4,7 @@ from scripts.generate_triangle import *
 
 import matplotlib.pyplot as plt
 
-points_number = 6
+points_number = 3
 
 circle_size = cercle_parameters(1,3,3,2,1,1)
 

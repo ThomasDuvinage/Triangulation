@@ -35,14 +35,6 @@ class generate_triangle:
                 k += 1
             i += 1
 
-
-        final_triangle = []
-        final_triangle.append(triangles[0])
-        self.save_triangle = 1
-
-        # for i in range(self.number_of_triangle):
-        #     print(triangles[i])
-
         n,o = 0,0
 
         while n < self.number_of_triangle:
