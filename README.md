@@ -36,6 +36,12 @@ We do that for all points.
 
 After that we can see that some triangles are the same like ABD = ADB so we delete one of them, so at the end of the loop we don't have any repetitions.
 
+By analysis table of triangles we can see that the number of triangles for one point which are really useful is :
+
+```python
+((nb_point-1) * (nb_point - 2)) / 2
+```
+
 Go to -->scripts/generate_triangle.py to see the code.
 
 ## Sources :
