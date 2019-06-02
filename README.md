@@ -23,6 +23,8 @@ array[] = [[A,B,C][A,D,C],...] //depend of the number of point you gave
 So first we generate all triangles for example if I choose 4 points it will be :
 For the point A :
 
+| Triangles |
+| --- |
 | ABC |
 | ABD |
 | ACB |
