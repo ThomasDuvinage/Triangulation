@@ -4,7 +4,7 @@ from scripts.generate_triangle import *
 
 import matplotlib.pyplot as plt
 
-points_number = 3
+points_number = 6
 
 circle_size = cercle_parameters(1,3,3,2,1,1)
 
@@ -27,7 +27,7 @@ for row in range(0,points_number):
 #this following line permit us to generate all triangles for the figure 
 triangle = generate_triangle(points_number)
 
-for row in range(0,triangle.save_triangle):
+for row in range(0,triangle.number_of_triangle):
     print("Triangle ", row," = ",triangle.triangles_generated[row])
 
 #plt.show()
