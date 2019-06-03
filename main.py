@@ -9,7 +9,7 @@ plt.figure(figsize=(7,7))
 points_number = 10
 final_triangles = []
 
-select_point = generate_points(points_number,100,100)
+select_point = generate_points(points_number,200,200)
 
 #this loop permit to print all parameters of all points
 for row in range(0,points_number):
