@@ -5,8 +5,7 @@ import matplotlib.pyplot as plt
 
 class generate_triangle:
     def __init__(self,point_number):
-        triangles = []
-        self.triangles_generated = {}
+        self.triangles = []
 
         self.number_of_triangle = 0
         i,k,p = 0,0,0
@@ -27,7 +26,7 @@ class generate_triangle:
                         p += 1
                     
                     if(i != k and i != p and k != p):
-                        triangles.append([i,k,p])
+                        self.triangles.append([i,k,p])
 
                         self.number_of_triangle = self.number_of_triangle + 1
 
@@ -42,16 +41,13 @@ class generate_triangle:
             while o < self.number_of_triangle:
                 if(o == n and o+1 < self.number_of_triangle):
                     o += 1
-                if(triangles[n][0] == triangles[o][0] or triangles[n][0] == triangles[o][1] or triangles[n][0] == triangles[o][2]):
-                    if(triangles[n][1] == triangles[o][0] or triangles[n][1] == triangles[o][1] or triangles[n][1] == triangles[o][2]):
-                        if(triangles[n][2] == triangles[o][0] or triangles[n][2] == triangles[o][1] or triangles[n][2] == triangles[o][2]):
-                            triangles.pop(o)
+                if(self.triangles[n][0] == self.triangles[o][0] or self.triangles[n][0] == self.triangles[o][1] or self.triangles[n][0] == self.triangles[o][2]):
+                    if(self.triangles[n][1] == self.triangles[o][0] or self.triangles[n][1] == self.triangles[o][1] or self.triangles[n][1] == self.triangles[o][2]):
+                        if(self.triangles[n][2] == self.triangles[o][0] or self.triangles[n][2] == self.triangles[o][1] or self.triangles[n][2] == self.triangles[o][2]):
+                            self.triangles.pop(o)
                             self.number_of_triangle -= 1
                 o += 1
             n += 1
 
 
-                                
-        for n in range(self.number_of_triangle):
-            self.triangles_generated[n] = triangles[n]
                     

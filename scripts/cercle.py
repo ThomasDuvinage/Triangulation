@@ -14,7 +14,7 @@ class cercle_parameters:
 
         y = 0.5 * (((-2 * x * (x2 - x1)) / (y2 - y1)) + ((pow(x2,2) - pow(x1,2)) / (y2 - y1)) + y2 + y1)
 
-        R = sqrt(pow(x1 - x,2) + pow(y1 - y,2))
+        R = sqrt(pow((x1 - x),2) + pow((y1 - y),2))
 
         self.X0 = x
         self.Y0 = y
@@ -22,7 +22,7 @@ class cercle_parameters:
 
 
 def create_circle(x,y,R):
-    circle = plt.Circle((x,y),R)
+    circle = plt.Circle((x,y),R,fill = False)
     return circle
 
 def show_circle(patch):
