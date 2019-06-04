@@ -25,7 +25,6 @@ triangle = generate_triangle(select_point.number_point)
 
 final_triangles = []
 
-
 #the following loop permit us to see all cercle for all points
 for row in range(triangle.number_of_triangle):
     print("Triangle ", row," = ",triangle.triangles[row])
@@ -54,15 +53,7 @@ for row in range(triangle.number_of_triangle):
     if(info == 0):
             final_triangles.append(triangle.triangles[row])
         
-x = []
-y = []
-for i in range(len(final_triangles)):
-    
-
-    x.append([select_point.points[final_triangles[i][0]][0],select_point.points[final_triangles[i][1]][0],select_point.points[final_triangles[i][2]][0],select_point.points[final_triangles[i][0]][0]])
-    y.append([select_point.points[final_triangles[i][0]][1],select_point.points[final_triangles[i][1]][1],select_point.points[final_triangles[i][2]][1],select_point.points[final_triangles[i][0]][1]])
-
-    plt.plot(x[i], y[i],color='green', linewidth=3)
+display_all_triangles(final_triangles,select_point)
 
 voronoi(final_triangles,select_point)
 

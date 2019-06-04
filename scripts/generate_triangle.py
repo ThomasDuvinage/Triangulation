@@ -50,4 +50,14 @@ class generate_triangle:
             n += 1
 
 
+def display_all_triangles(final_triangles,select_point):
+    x = []
+    y = []
+    for i in range(len(final_triangles)):
+        x.append([select_point.points[final_triangles[i][0]][0],select_point.points[final_triangles[i][1]][0],select_point.points[final_triangles[i][2]][0],select_point.points[final_triangles[i][0]][0]])
+        y.append([select_point.points[final_triangles[i][0]][1],select_point.points[final_triangles[i][1]][1],select_point.points[final_triangles[i][2]][1],select_point.points[final_triangles[i][0]][1]])
+
+        plt.plot(x[i], y[i],color='green', linewidth=3)
+
+
                     
