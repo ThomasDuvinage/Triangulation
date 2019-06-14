@@ -1,6 +1,12 @@
 from math import *
 import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
+
+plt.figure(figsize=(7,7))
+ax = plt.gca(projection='3d')
 
 class cercle_parameters:
     def __init__(self,x1,y1,x2,y2,x3,y3):

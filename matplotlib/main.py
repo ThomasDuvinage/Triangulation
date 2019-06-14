@@ -4,11 +4,16 @@ from scripts.generate_triangle import *
 from scripts.voronoi import *
 from math import sqrt
 
+from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
-plt.figure(figsize=(7,7))
-plt.axis([-10,210,-10,210])
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
 
-points_number = 20
+plt.figure(figsize=(7,7))
+ax = plt.gca(projection='3d')
+
+
+points_number = 10
 final_triangles = []
 
 select_point = generate_points(points_number,200,200,'random')
@@ -56,6 +61,6 @@ for row in range(triangle.number_of_triangle):
         
 display_all_triangles(final_triangles,select_point)
 
-voronoi(final_triangles,select_point)
+#voronoi(final_triangles,select_point)
 
 plt.show()

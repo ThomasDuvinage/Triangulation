@@ -1,6 +1,12 @@
 from math import *
 import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
+from matplotlib import cm
+from matplotlib.ticker import LinearLocator, FormatStrFormatter
+
+plt.figure(figsize=(7,7))
+ax = plt.gca(projection='3d')
 
 
 class generate_triangle:
@@ -57,7 +63,8 @@ def display_all_triangles(final_triangles,select_point):
         x.append([select_point.points[final_triangles[i][0]][0],select_point.points[final_triangles[i][1]][0],select_point.points[final_triangles[i][2]][0],select_point.points[final_triangles[i][0]][0]])
         y.append([select_point.points[final_triangles[i][0]][1],select_point.points[final_triangles[i][1]][1],select_point.points[final_triangles[i][2]][1],select_point.points[final_triangles[i][0]][1]])
 
-        plt.plot(x[i], y[i],color='green', linewidth=3)
+        surf = ax.plot_surface(x[i], y[i], 0, cmap=cm.coolwarm,linewidth=0, antialiased=False)
+        #plt.plot(x[i], y[i],color='green', linewidth=3)
 
 
                     
